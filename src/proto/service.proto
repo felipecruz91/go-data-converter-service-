@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package proto;
+
+message Request {
+  string body = 1;
+}
+
+message Response {
+  bytes result = 1;
+}
+
+service ConverterService {
+  rpc Convert (Request) returns (Response);
+}
